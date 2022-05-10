@@ -4,6 +4,7 @@ jobs:
   build:
     uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
     secrets: inherit
+    environment: main_env
     
 on:
   push:
