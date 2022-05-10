@@ -1,8 +1,8 @@
-name: Deploy Lambda
+name: Deploy Lambda in Serverless
 
 jobs:
   deploy:
-    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/deploy_lambda.yml@main
+    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/deploy_lambda_in_serverless.yml@main
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.ORG_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
