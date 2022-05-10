@@ -2,7 +2,7 @@ name: Deploy Lambda
 
 jobs:
   build:
-    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
+    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/deploy_lambda.yml@main
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.ORG_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
