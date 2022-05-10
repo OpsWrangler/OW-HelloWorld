@@ -1,8 +1,6 @@
 name: Deploy Lambda
 
 jobs:
-  checkout:
-    uses: actions/checkout@v3
   deploy:
     uses: OpsWrangler/OW-CentralizedActions/.github/workflows/deploy_lambda.yml@main
     secrets:
