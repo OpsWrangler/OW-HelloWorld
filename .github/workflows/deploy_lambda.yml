@@ -1,0 +1,17 @@
+name: Deploy Lambda
+
+jobs:
+  build:
+    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.ORG_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.ORG_AWS_DEFAULT_REGION }}
+    
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - serverlessFramework/Lambda/**
+  workflow_dispatch:  
