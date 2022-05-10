@@ -1,8 +1,8 @@
-name: Lambda Deploy
+name: Deploy
 
 jobs:
   build:
-    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/lambda.yml@main
+    uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
     
 on:
   push:
