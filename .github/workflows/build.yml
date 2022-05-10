@@ -3,8 +3,10 @@ name: Deploy
 jobs:
   build:
     uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
-    secrets: inherit
-    environment: main_env
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
     
 on:
   push:
