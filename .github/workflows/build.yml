@@ -3,6 +3,7 @@ name: Deploy
 jobs:
   build:
     uses: OpsWrangler/OW-CentralizedActions/.github/workflows/hello_world.yml@main
+    secrets: inherit
     
 on:
   push:
