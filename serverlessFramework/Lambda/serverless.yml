@@ -1,0 +1,5 @@
+service: minimal
+provider: aws
+functions:
+  hello:
+    handler: index.λ
