@@ -1,5 +1,15 @@
-service: minimal
-provider: aws
+service: hello-world
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ${opt:region, 'us-east-1'}
+  stackName: ${self:custom.serviceName}-${self:custom.envName}
+
 functions:
   hello:
-    handler: index.λ
+    handler: index.hello
+
+resources:
+  - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/s3.yml)}
+  
