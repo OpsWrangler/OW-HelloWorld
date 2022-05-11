@@ -4,7 +4,6 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ${opt:region, 'us-east-1'}
-  stackName: ${self:custom.serviceName}-${self:custom.envName}
 
 functions:
   hello:
