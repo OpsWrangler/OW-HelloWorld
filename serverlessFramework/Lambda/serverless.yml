@@ -1,4 +1,4 @@
-service: hello-world
+service: hello-world-${opt:stage}
 
 provider:
   name: aws
@@ -10,6 +10,14 @@ functions:
   hello:
     handler: index.hello
 
+custom:
+  s3_bucket_name: lambdapersistentdata01-${opt:stage}
+  versioning:
+    dev: "Disabled"
+    qc: "Disabled"
+    sbx: "Enabled"
+    prod: "Enabled"
+  
 resources:
   - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/s3.yml)}
   
