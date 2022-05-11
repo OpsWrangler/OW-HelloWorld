@@ -7,7 +7,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.ORG_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ${{ secrets.ORG_AWS_DEFAULT_REGION }}
-      GITHUB_TOKEN: ${{ secrets.ORG_GITHUB_TOKEN }}
+      GITHUB_TOKEN_1: ${{ secrets.ORG_GITHUB_TOKEN }}
     
 on:
   push:
