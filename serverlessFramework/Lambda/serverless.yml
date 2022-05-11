@@ -1,4 +1,4 @@
-service: hello-world-${opt:stage}
+service: hello-world
 
 provider:
   name: aws
@@ -12,9 +12,9 @@ functions:
 custom:
   s3_bucket_name: lambdapersistentdata01-${opt:stage}
   s3_versioning:
-    main: "Disabled"
-    dev: "Disabled"
-    qc: "Disabled"
+    main: "Suspended"
+    dev: "Suspended"
+    qc: "Suspended"
     sbx: "Enabled"
     prod: "Enabled"
   
