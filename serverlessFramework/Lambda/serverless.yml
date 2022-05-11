@@ -12,6 +12,7 @@ functions:
 custom:
   s3_bucket_name: lambdapersistentdata01-${opt:stage}
   s3_versioning:
+    main: "Disabled"
     dev: "Disabled"
     qc: "Disabled"
     sbx: "Enabled"
