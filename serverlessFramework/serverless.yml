@@ -17,5 +17,5 @@ custom:
     prod: "Enabled"
   
 resources:
-  - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/s3.yml)}
+  - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/modules/s3.yml)}
   
