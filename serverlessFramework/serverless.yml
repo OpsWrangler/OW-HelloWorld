@@ -5,6 +5,7 @@ provider:
   runtime: nodejs14.x
   region: ${opt:region, 'us-east-1'}
 
+# The functions section is only necessary if deploying a lambda
 functions:
   hello:
     handler: index.hello
@@ -15,6 +16,7 @@ custom:
     qc: "Suspended"
     sbx: "Enabled"
     prod: "Enabled"
+  a_secret: ${ssm:/ag/lsmwhat/asecret/${opt:stage}}
   
 resources:
   - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/modules/s3.yml)}
