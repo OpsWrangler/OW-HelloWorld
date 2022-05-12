@@ -14,5 +14,5 @@ on:
     branches:
       - main
     paths:
-      - serverlessFramework/Lambda/**
+      - serverlessFramework/**
   workflow_dispatch:  
