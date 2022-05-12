@@ -19,5 +19,5 @@ custom:
   a_secret: ${ssm:/ag/lsmwhat/asecret/${opt:stage}}
   
 resources:
-  - ${file(../../../OW-CentralizedIaCModules/serverlessFramework/modules/s3.yml)}
+  - ${file(../../OW-CentralizedIaCModules/serverlessFramework/modules/s3.yml)}
   
