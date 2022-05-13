@@ -3,10 +3,11 @@ This product doesn't do much on it's own. It only exists to be something for a *
 
 ### 🤔Why?
 
-- By segregating the Actions and Modules into their own repos, we can ensure Actions' and Modules':
+- By segregating the Actions and Modules into their own centralized repos, we can ensure Actions' and Modules':
   - Reusability
   - Security
   - Standards
+- Yes the DevOps team has involvement with these repos but are not meant to be blockers. These repos signify a segregation of duties, and PR's should be designed for multiple teams to have input: product team, security, architecture, network, spend...
 
 ### 🗒️How?
 
