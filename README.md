@@ -35,5 +35,5 @@ graph LR
 
 - Serverless Framework has a few different uses, one of which is an enhanced client for CloudFormation
 - CloudFormation is an AWS native and primitive tool, and was their first IaC tooling. It can be used to describe all infra in AWS
-- The YAML serverless.yml is easier to [validate](https://cuelang.org/docs/integrations/yaml/) vs. other languages
+- The YAML in `serverless.yml` is easier to [validate](https://cuelang.org/docs/integrations/yaml/) vs. other languages
 - We can pivot from this as we grow
