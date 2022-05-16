@@ -41,5 +41,5 @@ graph LR
 - PR's are instigated (security, standards, etc.) and approved
 - In the `QC` and higher branches, the pipeline will use the `stack.file` and shared modules in the Shared IaC repo only
 
-#### Github Actions Pipeline:
+#### Pipeline:
 - PR's are welcomed to improve the shared Github Actions for all products, as long as it is considered that the intentions of these Actions are shared amongst products, and not versioned / cloned for a particular product.
