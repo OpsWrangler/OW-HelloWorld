@@ -42,4 +42,4 @@ graph LR
 - In the `QC` and higher branches, the pipeline will use the `stack.file` and shared modules in the Shared IaC repo only
 
 #### Pipeline:
-- PR's are welcomed to improve the shared Github Actions for all products, as long as it is considered that the intentions of these Actions are shared amongst products, and not versioned / cloned for a particular product.
+- PR's are welcomed to improve the shared Github Actions for all products, as long as it is considered that the intentions of these Actions are shared amongst products, and not versioned / cloned for a particular product
