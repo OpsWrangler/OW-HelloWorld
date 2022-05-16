@@ -15,11 +15,13 @@ This product doesn't do much on it's own. It only exists to be something for a *
 
 - The product team copies an GitHub Actions `client.yml` that calls a shared GitHub Action, to their repo
 
+- Finally, the product team needs to add some secrets to their repo. This achieves self-service onboarding and automated IaC deployment pipeline. 
+
 - The pipeline looks like this:
 
 ```mermaid
 graph LR
-    Push_To_Named_Branch_and_folder -->
+    Product_Repo_Merge_To_Named_Branch_and_folder -->
     GitHub_Action_client -->
     Import_Centralized_Action -->
     Pass_Repo_Secrets -->
