@@ -13,7 +13,7 @@ This product doesn't do much on it's own. It only exists to be something for a *
 
 - The product team clones an example `stack.file` to their repo
 
-- The product team copies an GitHub Actions 'client.yml' that calls a shared GitHub Action, to their repo
+- The product team copies an GitHub Actions `client.yml` that calls a shared GitHub Action, to their repo
 
 - The pipeline in the looks like this:
 
