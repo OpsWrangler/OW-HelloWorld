@@ -7,20 +7,20 @@ This product doesn't do much on it's own. It only exists to be something for a *
   - Reusability
   - Security
   - Standards
-- Yes the DevOps team has involvement with these repos but are not meant to be blockers. These repos signify a segregation of duties, and PR's should be designed for multiple teams to have input: product team, security, architecture, network, spend...
+- Yes the DevOps team has involvement with these repos but are not meant to be owners or blockers. These repos signify a segregation of duties, and PR's should be designed for multiple teams to have input: product team, security, architecture, network, spend...
 
 ### 🗒️How?
 
 - The product team clones an example `stack.file` to their repo
 
-- The product team copies an GitHub Actions 'client.yml' that calls a shared GitHub Action
+- The product team copies an GitHub Actions 'client.yml' that calls a shared GitHub Action, to their repo
 
-- The pipeline in the dev branch looks like this:
+- The pipeline in the looks like this:
 
 ```mermaid
 graph LR
-    Push_To_dev_Branch_and_folder -->
-    GitHub_Action_Serverless_Deploy -->
+    Push_To_Named_Branch_and_folder -->
+    GitHub_Action_client -->
     Import_Centralized_Action -->
     Pass_Repo_Secrets -->
     Clone_Centralized_IaC_Repo -->
@@ -30,11 +30,10 @@ graph LR
     Centralized_IaC_Repo --> Clone_Centralized_IaC_Repo
 ```
 
-- Additionally the approach is engineered to allow for local work. The centralized IaC repo just needs to be cloned next to the product folder.
+### 🙌Democratizing DevOps
 
-### 🌩️Serverless Framework?
+- In the `dev` branch and environment, the shared pipeline will use the `stack.file` in the product repo, allowing for early adoption and iterations of devs building their own IaC stack
+- The devs then make PR's to get their stack and shared module changes to the Shared IaC repo. The `stack.file` can be versioned (tagged)
+- PR's are instigated (security, standards, etc.) and approved
+- In the `QC` and higher branches, the pipeline will use the `stack.file` and shared modules in the Shared IaC repo only
 
-- Serverless Framework has a few different uses, one of which is an enhanced client for CloudFormation
-- CloudFormation is an AWS native and primitive tool, and was their first IaC tooling. It can be used to describe all infra in AWS
-- The YAML in `serverless.yml` is easier to [validate](https://cuelang.org/docs/integrations/yaml/) vs. other languages
-- We can pivot from this as we grow
