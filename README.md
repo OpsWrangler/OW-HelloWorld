@@ -34,8 +34,12 @@ graph LR
 
 ### 🙌Democratizing DevOps
 
+#### IaC:
+
 - In the `dev` branch and environment, the shared pipeline will use the `stack.file` in the product repo, allowing for early adoption and iterations of devs building their own IaC stack
 - The devs then make PR's to get their stack and shared module changes to the Shared IaC repo. The `stack.file` can be versioned (tagged)
 - PR's are instigated (security, standards, etc.) and approved
 - In the `QC` and higher branches, the pipeline will use the `stack.file` and shared modules in the Shared IaC repo only
 
+#### Github Actions Pipeline:
+- PR's are welcomed to improve the shared Github Actions for all products, as long as it is considered that the intentions of these Actions are shared amongst products, and not versioned / cloned for a particular product.
