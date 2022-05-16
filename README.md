@@ -1,4 +1,4 @@
-# OpsWrangler - Hello World
+# Hello World
 This product doesn't do much on it's own. It only exists to be something for a **shared GitHub Actions** and **shared IaC module** approach to build infra.
 
 ### 🤔Why?
