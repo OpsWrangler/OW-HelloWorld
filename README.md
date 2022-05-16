@@ -11,15 +11,15 @@ This product doesn't do much on it's own. It only exists to be something for a *
 
 ### 🗒️How?
 
-- The product team copies an example IaC 'wrapper' file that describes their infra. At the moment we use Serverless Framework which exposes a single `serverless.yml` for this purpose.
+- The product team clones an example `stack.file` to their repo
 
-- The product team copies an GitHub Actions 'client' that calls a shared GitHub Action
+- The product team copies an GitHub Actions 'client.yml' that calls a shared GitHub Action
 
-- The pipeline looks like this:
+- The pipeline in the dev branch looks like this:
 
 ```mermaid
 graph LR
-    Push_To_Named_Branch_and_folder -->
+    Push_To_dev_Branch_and_folder -->
     GitHub_Action_Serverless_Deploy -->
     Import_Centralized_Action -->
     Pass_Repo_Secrets -->
