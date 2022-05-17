@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Detect Branch
+        shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
   deploy:
@@ -14,7 +15,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: ${{ secrets[format('ORG_AWS_DEFAULT_REGION_{0}', steps.extract_branch.outputs.branch)] }}
       GITHUB_TOKEN_1: ${{ secrets.ORG_GITHUB_TOKEN }}
-    
+      
 on:
   push:
     branches:
