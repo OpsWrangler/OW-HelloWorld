@@ -1,12 +1,18 @@
 name: Deploy Lambda in Serverless
 
 jobs:
+  branch_detect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Detect Branch
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
   deploy:
     uses: OpsWrangler/OW-CentralizedActions/.github/workflows/deploy_serverless.yml@main
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.ORG_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.ORG_AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: ${{ secrets.ORG_AWS_DEFAULT_REGION }}
+      AWS_DEFAULT_REGION: ${{ secrets.ORG_AWS_DEFAULT_REGION-${{ steps.extract_branch.outputs.branch }} }}
       GITHUB_TOKEN_1: ${{ secrets.ORG_GITHUB_TOKEN }}
     
 on:
